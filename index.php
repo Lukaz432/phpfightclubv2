@@ -1,24 +1,16 @@
 <?php
 
-$array = [
-    [
-        'owner' => 'Petras Pizdis',
-        'item' => 'telefonas',
-        'status' => 'prapistas',
-    ],
-    [
-        'owner' => 'Tomas Ablomas',
-        'item' => 'buljonas',
-        'status' => 'naudojamas',   
-    ],
-    [
-        'owner' => 'Ana Shitkova',
-        'item' => 'rulonas',
-        'status' => 'pasibaiges',
-    ],
+$my_memories = [
+    'ginklas',
+    'suvis',
+    'sirenos',
+    'suolis',
+    'adrenalinas',
+    'pabegimas',
+    'blykste',
  ];
 
- var_dump($array);
+var_dump($my_memories);
 
 
 ?>
