@@ -41,3 +41,24 @@ foreach ($drinks as $key => $drink) {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Private Dealer</title>
+    </head>
+    <body>
+        <div class="drinks-container">
+            <?php foreach ($drinks as $key => $drink): ?>
+                <div class="drink">
+                    <?php if (isset($drink['price_stock_display'])): ?>
+                        <div class="price stock"><?php print $drink['price_stock_display']; ?></div>
+                    <?php endif; ?>
+                    <div class="price retail"><?php print $drink['price_retail_display']; ?></div>
+                    <img class="drink-image" src="<?php print $drink['img']; ?>">
+                    <div class="drink-name"><?php print $drink['name']; ?></div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </body>
+</html>
