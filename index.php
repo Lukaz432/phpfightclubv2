@@ -46,6 +46,53 @@ foreach ($drinks as $key => $drink) {
     <head>
         <meta charset="UTF-8">
         <title>Private Dealer</title>
+        <style>            
+            .drinks-container {
+                max-width: 800px;
+                position: relative;
+                display: flex;               
+            }
+
+            .drink {
+                position: relative;
+                display: inline-block;
+                margin: 10px;
+                border: 1px solid gray;
+                height: 250px;
+                width: 200px;
+                text-align: center;
+            }
+
+            .drink-image {
+                object-fit: cover;
+                height: 150px;
+                margin: 0 auto;
+            }
+
+            .drink-name {
+                font-size: 16px;
+            }
+
+            .price {
+                display: block;
+                position: absolute;                
+                color: white;
+                padding: 4px;
+            }
+
+            .price.stock {
+                background: gray;
+                left: 0;
+                top: 0;
+            }
+
+            .price.retail {
+                background: red;
+                right: 0;
+                top: 0;        
+                padding: 6px;
+            }
+        </style>
     </head>
     <body>
         <div class="drinks-container">
