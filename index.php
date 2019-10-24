@@ -32,4 +32,12 @@ $drinks = [
        'img' => 'https://us.123rf.com/450wm/ultimagaina/ultimagaina1603/ultimagaina160300031/55062044-usa-imported-heineken-beer-bottle-heineken-is-a-popular-dutch-pale-lager-beer-produced-by-the-dutch-.jpg?ver=6',
     ],  
 ];
+foreach ($drinks as $key => $drink) {
+    $drinks[$key]['price_retail'] = $drink['price_stock'] * (1 - $drink['discount'] * 0.01);
+    $drinks[$key]['price_retail_display'] = "&euro;" . number_format($drinks[$key]['price_retail'], 2);
+
+    if ($drink['discount']) {
+        $drinks[$key]['price_stock_display'] = "&euro;" . number_format($drinks[$key]['price_stock'], 2);
+    }
+}
 ?>
